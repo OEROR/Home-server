@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Файловый сервер</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="header">
+            <h1 class="title"><i class="fas fa-server"></i> Файловый сервер</h1>
+            <p class="subtitle">Управление вашими файлами</p>
+        </div>
+
+        <div class="upload-section">
+            <label class="upload-btn">
+                <input type="file" id="fileInput" multiple hidden>
+                <i class="fas fa-cloud-upload-alt"></i> Выбрать файлы
+            </label>
+        </div>
+<!-- Добавляем после upload-section -->
+<div class="upload-progress" id="uploadProgress" style="display: none;">
+    <div class="progress-bar" id="progressBar"></div>
+    <span class="progress-text" id="progressText">0%</span>
+  </div>
+
+        <div class="actions">
+            <button class="action-btn" id="showFiles">
+                <i class="fas fa-folder-open"></i> Показать файлы
+            </button>
+        </div>
+
+        <div class="file-list-container">
+            <div id="fileList" class="file-list">
+                <div class="empty-state">
+                    <i class="fas fa-box-open"></i>
+                    <p>Файлы отсутствуют перезагрузите список</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Водяной знак -->
+    <div class="watermark">
+        <a href="https://www.youtube.com/@OEROR" target="_blank">
+            <i class="fab fa-youtube"></i> YouTube: OEROR
+        </a>
+        <p>Создано с помощью ChatGPT и DeepSeek</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
